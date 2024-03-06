@@ -1,0 +1,7 @@
+.body-regular {
+	@include typography(1.6rem, 140%);
+}
+
+.body-small {
+	@include typography(1.4rem, 140%);
+}

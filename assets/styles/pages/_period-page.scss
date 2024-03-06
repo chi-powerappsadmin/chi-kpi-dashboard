@@ -1,0 +1,21 @@
+.period-page {
+	&__top {
+		@extend .flex;
+		@extend .content-between;
+		background-color: $accent;
+		padding: 1.5rem 2rem;
+
+		@include breakpoint(md) {
+			padding: 2.4rem 3.2rem;
+		}
+	}
+
+	&__actions {
+		@include flex-center;
+		gap: 0.8rem;
+
+		button {
+			gap: 0.4rem;
+		}
+	}
+}

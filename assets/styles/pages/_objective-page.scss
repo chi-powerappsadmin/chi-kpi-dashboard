@@ -1,0 +1,25 @@
+.objectives-page {
+	height: 100%;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+		background-color: $accent;
+		padding: 1.5rem 2rem;
+
+		@include breakpoint(md) {
+			padding: 2.4rem 3.2rem;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.8rem;
+
+		button {
+			gap: 0.4rem;
+		}
+	}
+}

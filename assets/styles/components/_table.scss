@@ -1,0 +1,203 @@
+.table {
+	&__wrapper {
+		zoom: 1;
+		position: relative;
+
+		// ::-webkit-scrollbar {
+		// 	display: none;
+		// }
+	}
+
+	&__loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255, 255, 255, 0.7);
+		z-index: 1;
+
+		&__text {
+			@include typography(1.6rem, normal);
+			font-weight: 500;
+		}
+	}
+
+	&__body {
+		overflow-x: auto;
+	}
+
+	&__column {
+		padding: 0.9rem 1.2rem;
+		cursor: pointer;
+
+		&-header {
+			display: inline-block;
+			max-width: 100%;
+			vertical-align: top;
+		}
+
+		&-icon {
+			display: inline-block;
+			height: 1.6rem;
+			width: 1.6rem;
+			vertical-align: middle;
+
+			&--active {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__cell {
+		vertical-align: middle;
+		padding: 1.6rem 1.2rem;
+		overflow-wrap: break-word;
+	}
+
+	&__row {
+		box-shadow: 0px -1px 0px 0px #e1e3e5 inset;
+
+		&:nth-of-type(even) {
+			background: rgba(252, 252, 252, 0.99);
+		}
+
+		&--light {
+			&:nth-of-type(even) {
+				background: #FAFCFE;
+			}
+		}
+
+		&:nth-of-type(odd) {
+			background: #fff;
+		}
+	}
+
+	&__checkbox {
+		text-align: center;
+		width: 4.8rem;
+	}
+
+	&__empty {
+		@include typography(1.4rem, 140%);
+		color: #000;
+		text-align: center;
+		padding: 9.6rem 0;
+		font-family: "Work Sans", sans-serif;
+		font-weight: 500;
+	}
+
+	&__link {
+		@include typography(1.3rem, normal);
+		font-weight: 600;
+		color: $sec-brand;
+
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 0.5rem;
+		}
+	}
+
+	&__input-edittable {
+		max-width: 100%;
+		border: 0;
+		outline: 0;
+		background-color: transparent;
+
+		&:focus {
+			background-color: transparentize($sec-brand, $amount: 0.85);
+		}
+	}
+
+	&__pagination {
+		background: #FAFCFE;
+		margin-top: 2rem;
+		justify-content: space-between;
+		gap: 1.2rem;
+		font-family: 'Montserrat', sans-serif;
+		@include typography(1.4rem, 2.2rem);
+		color: #555;
+		padding: 0.8rem 0;
+
+		&--right {
+			margin-left: auto;
+			gap: 0.9rem;
+		}
+
+		&-count {
+			&-text {
+				padding: 1.2rem 1rem;
+			}
+
+			&-row {
+				padding: 0.8rem 2rem 0.8rem 1.6rem;
+				gap: 1rem;
+			}
+		}
+
+		&-current {
+			padding: 1rem;
+		}
+
+		&-navigation {
+			gap: 1rem;
+			padding: 1rem;
+
+			button {
+				line-height: 0;
+			}
+		}
+	}
+}
+
+table {
+	width: 100%;
+	text-align: left;
+	border-collapse: separate;
+	border-spacing: 0;
+	table-layout: fixed;
+	font-family: "Montserrat", sans-serif;
+
+	thead {
+		display: table-header-group;
+		vertical-align: middle;
+		border-color: inherit;
+		background: $light-grey;
+		box-shadow: 0px -1px 0px 0px #e1e3e5 inset;
+
+		tr {
+			display: table-row;
+			vertical-align: inherit;
+			border-color: inherit;
+
+			th {
+				@include typography(1.2rem, normal);
+				color: $text;
+				font-weight: 600;
+				text-align: left;
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	tbody {
+		display: table-row-group;
+		vertical-align: middle;
+		border-color: inherit;
+
+		tr {
+			display: table-row;
+			vertical-align: inherit;
+			border-color: inherit;
+
+			td {
+				@include typography(1.4rem, normal);
+				color: $text;
+				font-weight: 600;
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.dropdown {
+	position: absolute;
+	overflow: hidden;
+	border-radius: 0.8rem;
+	border: 1px solid $outline;
+	box-shadow: 0px 0px 1.2rem 0px rgba(0, 0, 0, 0.05) inset;
+	z-index: 2;
+	width: 100%;
+
+	&__search {
+		background-color: #fff;
+		padding: 0.8rem;
+	}
+
+	&__item {
+		@include typography(1.4rem, normal);
+		display: flex;
+		align-items: center;
+		padding: 1.45rem 1.6rem;
+		background: $light-grey;
+		cursor: pointer;
+		color: $text;
+		font-weight: 600;
+		width: 100%;
+		text-align: left;
+		gap: 0.8rem;
+
+		&--action {
+			color: $dark;
+			font-weight: 500;
+		}
+
+		&:not(:last-child) {
+			box-shadow: 0px -1px 0px 0px #e1e3e5 inset;
+		}
+		&:hover {
+			background-color: darken($light-grey, 2.5%);
+		}
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "nuxt-app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare",
+		"lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+		"lint:prettier": "prettier --check .",
+		"lint": "yarn lint:js && yarn lint:prettier",
+		"lintfix": "prettier --write --list-different . && yarn lint:js --fix",
+		"start": "node .output/server/index.mjs"
+	},
+	"engines": {
+		"node": "18.x"
+	},
+	"devDependencies": {
+		"@nuxt/devtools": "latest",
+		"@nuxtjs/eslint-config-typescript": "^12.1.0",
+		"@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+		"@types/file-saver": "^2.0.7",
+		"@types/lodash": "^4.14.201",
+		"@types/quill": "^2.0.14",
+		"@types/uuid": "^9.0.7",
+		"@typescript-eslint/parser": "^6.9.0",
+		"apexcharts": "^3.44.0",
+		"eslint": "^8.52.0",
+		"eslint-config-prettier": "^9.0.0",
+		"eslint-plugin-prettier": "^5.0.1",
+		"nuxt": "^3.8.0",
+		"prettier": "^3.0.3",
+		"sass": "^1.69.5",
+		"typescript": "^5.2.2",
+		"vue": "^3.3.7",
+		"vue-router": "^4.2.5",
+		"vue3-apexcharts": "^1.4.4"
+	},
+	"dependencies": {
+		"@azure/msal-browser": "^3.4.0",
+		"@pinia/nuxt": "^0.5.1",
+		"@vuelidate/core": "^2.0.3",
+		"@vuelidate/validators": "^2.0.4",
+		"@vueuse/core": "^10.5.0",
+		"defu": "^6.1.3",
+		"exceljs": "^4.4.0",
+		"file-saver": "^2.0.5",
+		"lodash": "^4.17.21",
+		"mitt": "^3.0.1",
+		"pinia": "^2.1.7",
+		"quill": "^1.3.7",
+		"radial-progress-vue3": "^0.0.3",
+		"uuid": "^9.0.1"
+	}
+}

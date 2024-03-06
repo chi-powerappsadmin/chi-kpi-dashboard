@@ -1,0 +1,52 @@
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin breakpoint($breakpoint) {
+	@if $breakpoint ==sm {
+		@media only screen and (min-width: 640px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint ==md {
+		@media only screen and (min-width: 768px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint ==lg {
+		@media only screen and (min-width: 1024px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint ==xl {
+		@media only screen and (min-width: 1280px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint ==2xl {
+		@media only screen and (min-width: 1536px) {
+			@content;
+		}
+	}
+}
+
+@mixin typography($mobile-font-size, $mobile-line-height, $desktop-font-size: $mobile-font-size, $desktop-line-height: $mobile-line-height) {
+	font-size: $mobile-font-size;
+	line-height: $mobile-line-height;
+
+	@include breakpoint(md) {
+		font-size: $desktop-font-size;
+		line-height: $desktop-line-height;
+	}
+}
+
+@mixin element-size($height, $width) {
+	height: $height;
+	width: $width;
+}

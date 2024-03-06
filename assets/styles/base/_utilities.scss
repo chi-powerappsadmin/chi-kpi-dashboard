@@ -1,0 +1,137 @@
+$displays: flex, grid, block;
+
+@each $display in $displays {
+	.#{$display} {
+		display: $display;
+	}
+}
+
+// Flex wrap classes
+$flex-wraps: wrap, nowrap;
+
+@each $wrap in $flex-wraps {
+	.flex-#{$wrap} {
+		flex-wrap: $wrap;
+	}
+}
+
+// Flex direction classes
+$flex-direction: column, row;
+
+@each $direction in $flex-direction {
+	.flex-#{$direction} {
+		flex-direction: $direction;
+	}
+}
+
+// Item alignment classes
+$items-alignment: (
+	"items-center": center,
+	"items-start": start,
+	"items-end": end,
+);
+
+@each $name, $value in $items-alignment {
+	.#{$name} {
+		align-items: $value;
+	}
+}
+
+// Content alignment classes
+$content-alignment: (
+	"content-center": center,
+	"content-between": space-between,
+	"content-end": end,
+);
+
+@each $name, $value in $content-alignment {
+	.#{$name} {
+		justify-content: $value;
+	}
+}
+
+// Text alignment classes
+$text-alignments: left, right, center, justify;
+
+@each $alignment in $text-alignments {
+	.text-#{$alignment} {
+		text-align: $alignment;
+	}
+}
+
+// Font weight classes
+$font-weights: 500, 600, 700, 800;
+
+@each $font-weight in $font-weights {
+	.weight-#{$font-weight} {
+		font-weight: $font-weight;
+	}
+}
+
+$gaps: (
+	"4": 0.4rem,
+	"8": 0.8rem,
+	"12": 1.2rem,
+);
+
+@each $name, $value in $gaps {
+	.gap-#{$name} {
+		gap: $value !important;
+	}
+}
+
+// Font family class
+$fonts: (
+	"work-sans": "Work Sans",
+	"montserrat": "Montserrat",
+	"poppins": "Poppins",
+);
+
+@each $name, $value in $fonts {
+	.font-#{$name} {
+		font-family: $value, sans-serif;
+	}
+}
+
+$positions: static, relative, absolute, fixed, sticky;
+
+@each $position in $positions {
+	.#{$position} {
+		position: #{$position};
+	}
+}
+
+// Font family class
+$colors: (
+	"sec": $sec-brand,
+	"text": $text,
+	"text-black": $text-black,
+	"dark": $dark,
+);
+
+@each $name, $value in $colors {
+	.color-#{$name} {
+		color: $value;
+	}
+
+	.bg-#{$name} {
+		background-color: $value;
+	}
+}
+
+$text-transforms: uppercase, lowercase, capitalize;
+
+@each $transform in $text-transforms {
+	.#{$transform} {
+		text-transform: #{$transform};
+	}
+}
+
+.w-100 {
+	width: 100%;
+}
+
+
+.pointer {
+	cursor: pointer;
+}
